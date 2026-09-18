@@ -1,0 +1,244 @@
+/*siuuuuu ------------------------------
+   CONFIGURACIÓN GENERAL
+------------------------------ */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f8f9fa);
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+
+/* ------------------------------
+   ENCABEZADO
+------------------------------ */
+
+.encabezado {
+    padding-top: 20px;
+}
+
+.icono-color {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #6c757d;
+    font-size: 17px;
+}
+
+
+/* ------------------------------
+   TARJETAS
+------------------------------ */
+
+.panel {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.titulo-panel {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.texto-secundario {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+
+/* ------------------------------
+   SELECTOR DE COLOR
+------------------------------ */
+
+.selector-color {
+    background-color: #f8f9fa;
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.selector-color .form-label {
+    font-weight: 600;
+}
+
+.color-picker-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.color-picker-contenedor input[type="color"] {
+    width: 65px;
+    height: 50px;
+    padding: 3px;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.color-picker-contenedor span {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+
+/* ------------------------------
+   CONTROLES RGB
+------------------------------ */
+
+.control-rgb {
+    margin-bottom: 28px;
+}
+
+.control-rgb label {
+    font-weight: 600;
+}
+
+.valor {
+    background-color: #f1f3f5;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+/* Puntos de colores */
+
+.punto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.rojo-punto {
+    background-color: #ff3b30;
+}
+
+.verde-punto {
+    background-color: #34c759;
+}
+
+.azul-punto {
+    background-color: #007aff;
+}
+
+
+/* ------------------------------
+   SLIDERS
+------------------------------ */
+
+.form-range {
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+
+/* ------------------------------
+   CAMPOS NUMÉRICOS
+------------------------------ */
+
+input[type="number"] {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+}
+
+
+/* ------------------------------
+   CUADRO DE COLOR
+------------------------------ */
+
+.color-preview {
+    width: 100%;
+    height: 250px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 18px;
+    border: 4px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+
+/* ------------------------------
+   CÓDIGOS RGB Y HEX
+------------------------------ */
+
+.codigo-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f8f9fa;
+
+    border-radius: 12px;
+
+    padding: 15px 18px;
+
+    margin-top: 12px;
+}
+
+.codigo-box span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.codigo-box strong {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+
+/* ------------------------------
+   PIE
+------------------------------ */
+
+.pie {
+    margin-top: 35px;
+    color: #868e96;
+    font-size: 13px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media (max-width: 768px) {
+
+    .encabezado h1 {
+        font-size: 30px;
+    }
+
+    .color-preview {
+        height: 200px;
+    }
+
+}

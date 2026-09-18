@@ -1,0 +1,266 @@
+// Modificación para la actividad 1.3
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RGB Color Picker</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <!-- Encabezado -->
+        <div class="text-center encabezado mb-5">
+
+            <div class="icono-color">
+                🎨
+            </div>
+
+            <h1>Selector de Color RGB</h1>
+
+            <p>
+                Crea tu propio color combinando los valores
+                <strong>Rojo, Verde y Azul</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center g-4">
+
+            <!-- PANEL DE CONTROLES -->
+            <div class="col-lg-6">
+
+                <div class="card panel">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="titulo-panel">
+                            Configura tu color
+                        </h3>
+
+                        <p class="texto-secundario">
+                            Escribe los valores o utiliza los controles.
+                        </p>
+
+
+                        <!-- COLOR PICKER -->
+                        <div class="selector-color mb-4">
+
+                            <label for="colorPicker" class="form-label">
+                                Selector de color
+                            </label>
+
+                            <div class="color-picker-contenedor">
+
+                                <input
+                                    type="color"
+                                    id="colorPicker"
+                                    value="#808080"
+                                    title="Selecciona un color">
+
+                                <span>
+                                    Haz clic para elegir un color
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ROJO -->
+                        <div class="control-rgb rojo">
+
+                            <div class="d-flex justify-content-between">
+
+                                <label for="rojo">
+                                    <span class="punto rojo-punto"></span>
+                                    Rojo (R)
+                                </label>
+
+                                <span id="valorRojo" class="valor">
+                                    128
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="range"
+                                class="form-range"
+                                id="rojo"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="rojoDecimal"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                        </div>
+
+
+                        <!-- VERDE -->
+                        <div class="control-rgb verde">
+
+                            <div class="d-flex justify-content-between">
+
+                                <label for="verde">
+                                    <span class="punto verde-punto"></span>
+                                    Verde (G)
+                                </label>
+
+                                <span id="valorVerde" class="valor">
+                                    128
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="range"
+                                class="form-range"
+                                id="verde"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="verdeDecimal"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                        </div>
+
+
+                        <!-- AZUL -->
+                        <div class="control-rgb azul">
+
+                            <div class="d-flex justify-content-between">
+
+                                <label for="azul">
+                                    <span class="punto azul-punto"></span>
+                                    Azul (B)
+                                </label>
+
+                                <span id="valorAzul" class="valor">
+                                    128
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="range"
+                                class="form-range"
+                                id="azul"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="azulDecimal"
+                                min="0"
+                                max="255"
+                                value="128">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PANEL DEL RESULTADO -->
+            <div class="col-lg-5">
+
+                <div class="card panel resultado">
+
+                    <div class="card-body p-4">
+
+                        <h3 class="titulo-panel text-center">
+                            Color seleccionado
+                        </h3>
+
+                        <p class="texto-secundario text-center">
+                            Vista previa
+                        </p>
+
+
+                        <!-- CUADRO DE COLOR -->
+                        <div
+                            id="colorPreview"
+                            class="color-preview">
+                        </div>
+
+
+                        <!-- RGB -->
+                        <div class="codigo-box mt-4">
+
+                            <span>
+                                RGB
+                            </span>
+
+                            <strong id="codigoRGB">
+                                rgb(128, 128, 128)
+                            </strong>
+
+                        </div>
+
+
+                        <!-- HEX -->
+                        <div class="codigo-box">
+
+                            <span>
+                                HEX
+                            </span>
+
+                            <strong id="codigoHex">
+                                #808080
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PIE -->
+        <div class="text-center pie">
+            Selector RGB • Valores de 0 a 255
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
